@@ -16,17 +16,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center">
+            android:gravity="center"
+            android:background="@color/amber">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hello World!" />
+                android:text="Tap here to reset!"
+                android:textSize="28sp"
+                android:textColor="@color/white" />
          </LinearLayout>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="Tap here to start!"
+            android:textSize="24sp" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
