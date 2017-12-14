@@ -34,4 +34,21 @@ public class MainActivity extends AppCompatActivity {
             counter.setText("You have clicked " +String.valueOf(count)+ " times");
         }
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("countKey",count);
+        outState.putCharSequence("counterKey",counter.getText());
+        outState.putCharSequence("tapKey",tap.getText());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        count = savedInstanceState.getInt("countKey");
+        counter.setText(savedInstanceState.getCharSequence("CounterKey"));
+        tap.setText(savedInstanceState.getCharSequence("tapKey"));
+    }
+
 }
