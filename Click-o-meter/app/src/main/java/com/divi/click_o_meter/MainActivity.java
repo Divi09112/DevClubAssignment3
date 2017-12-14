@@ -9,13 +9,20 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private int count;
-    private TextView counter =(TextView)findViewById(R.id.text1);
-    private Button tap = (Button)findViewById(R.id.button1);
+    private TextView counter;
+    private Button tap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initialize();
+    }
+
+    private void initialize(){
+        count = 0;
+        counter = (TextView)findViewById(R.id.text1);
+        tap = (Button)findViewById(R.id.button1);
     }
 
     public void reset(View view) {

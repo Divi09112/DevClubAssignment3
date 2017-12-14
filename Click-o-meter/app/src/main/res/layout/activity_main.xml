@@ -36,6 +36,7 @@
             android:layout_weight="1"
             android:background="@color/white"
             android:text="Tap here to start!"
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:onClick="click"/>
     </LinearLayout>
